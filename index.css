@@ -2717,9 +2717,83 @@ html, body {
 
 
 
+
 /* ===================================================
-   HERO SECTION PROPORTIONAL SIZING (ENLARGED FONTS & BUTTONS, NO BADGES)
+   HERO BUTTONS - CONSISTENT & CRISP ACROSS ALL SCREENS
    =================================================== */
+.landing-buttons-wrapper {
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+.hero-btn {
+    padding: 13px 26px !important;
+    border-radius: 30px !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+    transition: all 0.25s ease !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+/* Primary Button: Solid Vibrant Orange */
+.hero-btn.primary-btn,
+#landing-cta-button {
+    background: #FF923E !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(255, 146, 62, 0.4) !important;
+}
+
+.hero-btn.primary-btn *,
+#landing-cta-button * {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+.hero-btn.primary-btn:hover,
+#landing-cta-button:hover {
+    background: #ff7d1a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 146, 62, 0.5) !important;
+}
+
+/* Secondary Button: Clean White with Crisp Orange Border */
+.hero-btn.secondary-btn,
+#landing-open-cv-btn {
+    background: #ffffff !important;
+    color: #091434 !important;
+    border: 2px solid #FF923E !important;
+    box-shadow: 0 4px 12px rgba(9, 20, 52, 0.08) !important;
+}
+
+.hero-btn.secondary-btn span,
+#landing-open-cv-btn span {
+    color: #091434 !important;
+    font-weight: 600 !important;
+}
+
+.hero-btn.secondary-btn i,
+#landing-open-cv-btn i {
+    color: #FF923E !important;
+}
+
+.hero-btn.secondary-btn:hover,
+#landing-open-cv-btn:hover {
+    background: #fff7ed !important;
+    border-color: #ff7d1a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 146, 62, 0.25) !important;
+}
+
 @media (max-aspect-ratio: 12/10) {
     #landing-page {
         padding-top: 68px !important;
@@ -2734,23 +2808,10 @@ html, body {
         font-weight: 500 !important;
         fill: #475569 !important;
     }
-    #landing-cta-button,
-    #landing-open-cv-btn {
+    .hero-btn {
         padding: 15px 30px !important;
         font-size: 1.25rem !important;
         border-radius: 32px !important;
-        font-weight: 600 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-shadow: 0 4px 16px rgba(255, 146, 62, 0.4) !important;
-        transition: all 0.25s ease !important;
-    }
-    #landing-open-cv-btn {
-        background: #ffffff !important;
-        color: #091434 !important;
-        border: 2.5px solid #FF923E !important;
-        box-shadow: 0 4px 14px rgba(9, 20, 52, 0.08) !important;
     }
 }
 
@@ -2761,8 +2822,7 @@ html, body {
     .landing-subheading {
         font-size: 20px !important;
     }
-    #landing-cta-button,
-    #landing-open-cv-btn {
+    .hero-btn {
         padding: 13px 24px !important;
         font-size: 1.12rem !important;
     }
