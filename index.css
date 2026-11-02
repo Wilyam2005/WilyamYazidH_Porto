@@ -2425,3 +2425,125 @@ html, body {
         font-size: 0.76rem;
     }
 }
+
+
+/* ===================================================
+   MOBILE FIXES - WILYAM YAZID HAMDI PORTFOLIO
+   Perbaikan tampilan HP: hero name, sosmed contact, prestasi modal scroll
+   =================================================== */
+
+/* ---- FIX 1: Hero "name is Wilyam" terpotong di HP ---- */
+/* SVG viewBox="0 0 500 350", text "name is Wilyam." di y=135
+   Di layar sempit, text di kanan viewBox terpotong karena max-width terlalu kecil */
+@media (max-aspect-ratio: 12/10) {
+    #landing-content-svg {
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow: visible;
+    }
+    #landing-page-section {
+        max-height: 52vh;
+        overflow: visible;
+    }
+    /* Perkecil font headline SVG di layar sempit agar muat */
+    .landing-headline {
+        font-size: 56px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .landing-headline {
+        font-size: 46px !important;
+    }
+    #landing-content-svg {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .landing-headline {
+        font-size: 40px !important;
+    }
+}
+
+/* ---- FIX 2: Contact section - sosmed & Kirim Pesan button di HP ---- */
+@media (max-width: 768px), (max-aspect-ratio: 12/10) {
+    /* Kirim Pesan button: lebar penuh, di atas sosmed (karena column-reverse) */
+    #contact-button-container {
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: stretch !important;
+    }
+
+    #contact-submit-button {
+        width: 100% !important;
+        text-align: center !important;
+        margin-left: 0 !important;
+        padding: 14px 20px !important;
+        font-size: 1rem !important;
+        border-radius: 14px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Social icons di bawah button, jangan disembunyikan */
+    #contact-button-container .social-icon {
+        display: inline-block !important;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 1.1rem !important;
+        margin: 0 4px !important;
+    }
+
+    #menu-social-container {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+}
+
+/* ---- FIX 3: Prestasi modal - tidak bisa scroll ke bawah di HP ---- */
+/* Masalah: cv-modal-content pakai overflow:hidden, cv-tabs-body tidak punya min-height:0
+   sehingga flex child tidak bisa shrink dan scroll tidak bekerja di iOS/Android */
+.cv-modal-overlay {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    align-items: flex-start !important;
+    padding: 10px !important;
+}
+
+.cv-modal-content {
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 95vh !important;
+}
+
+.cv-tabs-body {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;          /* KRUSIAL: tanpa ini flex child tidak bisa shrink */
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important; /* Smooth scroll iOS */
+    overscroll-behavior: contain !important;
+}
+
+@media (max-width: 768px) {
+    .cv-modal-overlay {
+        padding: 6px !important;
+        align-items: flex-start !important;
+    }
+    .cv-modal-content {
+        height: auto !important;
+        max-height: 95vh !important;
+        border-radius: 14px !important;
+        margin: auto;
+    }
+    .cv-tabs-body {
+        max-height: calc(95vh - 200px); /* sisa tinggi setelah header + tabs nav */
+        padding: 12px 10px !important;
+    }
+}
