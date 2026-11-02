@@ -255,13 +255,14 @@
     }
     #landing-page {
         align-items: flex-start;
-        padding-top: 45px;
-        background-image: linear-gradient(180deg, #F5EFE6 45%, transparent 50%)
+        padding-top: 72px;
+        background-image: linear-gradient(180deg, #F5EFE6 55%, transparent 60%)
     }
     #landing-page-section {
-        max-height: 40vh;
-        justify-content: center;
-        align-items: center;
+        max-height: none;
+        height: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
         position: unset
     }
 }
@@ -771,14 +772,16 @@
 
 #contact-container {
     margin-top: 40px;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 24px 20px 32px;
+    border-radius: 22px;
     background: white;
     width: 540px;
     max-width: 45%;
-    height: 560px;
-    max-height: 90vh;
-    box-sizing: border-box
+    height: auto !important;
+    min-height: unset !important;
+    max-height: none !important;
+    box-sizing: border-box;
+    box-shadow: 0 12px 40px rgba(9, 20, 52, 0.08);
 }
 
 #contact-container input,
@@ -799,12 +802,19 @@ textarea:focus {
 }
 
 #contact-message-input {
-    flex: 1
+    flex: unset !important;
+    height: auto !important;
+    margin-bottom: 18px !important;
 }
 
-#contact-container textarea,
-.contact-container {
-    height: 100%
+#contact-container textarea {
+    height: 95px !important;
+    min-height: 85px !important;
+    max-height: 140px !important;
+    resize: vertical;
+}
+#contact-form-container {
+    height: auto !important;
 }
 
 .input-container {
@@ -1514,7 +1524,9 @@ html, body {
 /* Fix mobile view: Mobile devices & Portrait Aspect Ratios */
 @media (max-width: 768px), (max-aspect-ratio: 12/10) {
     #landing-page-section {
-        max-height: 45vh;
+        max-height: none;
+        height: auto;
+        align-items: flex-start;
     }
     
     #landing-content-svg {
@@ -1611,14 +1623,19 @@ html, body {
         width: 100%;
         height: auto !important;
         min-height: unset !important;
+        max-height: none !important;
         box-sizing: border-box;
-        padding: 16px;
-        border-radius: 16px;
+        padding: 18px 16px 28px !important;
+        border-radius: 20px;
+        background: white !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: visible;
     }
 
     #contact-message-input textarea {
-        min-height: 85px;
-        height: 85px;
+        min-height: 85px !important;
+        height: 95px !important;
+        max-height: 140px !important;
     }
 
     #contact-button-container {
@@ -2442,7 +2459,9 @@ html, body {
         overflow: visible;
     }
     #landing-page-section {
-        max-height: 52vh;
+        max-height: none !important;
+        height: auto !important;
+        align-items: flex-start !important;
         overflow: visible;
     }
     /* Perkecil font headline SVG di layar sempit agar muat */
@@ -2639,9 +2658,10 @@ html, body {
 #contact-button-container {
     display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 14px !important;
     align-items: stretch !important;
     margin-top: 16px !important;
+    margin-bottom: 4px !important;
 }
 
 /* Tombol Kirim Pesan: lebar penuh */

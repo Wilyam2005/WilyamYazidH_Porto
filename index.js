@@ -38387,7 +38387,7 @@ let pM = class {
       (this.landingPage = this.experience.ui.landingPage),
       (this.transition = this.experience.ui.transition),
       (this.tweens = []),
-      this.deactivate(!1),
+      localStorage.getItem("soundActive") === "false" ? this.deactivate(!1) : this.activate(!1),
       this.domElements.button.addEventListener("click", () => {
         this.transition.isShowing ||
           (this.active ? this.deactivate() : this.activate(),
@@ -39389,8 +39389,7 @@ class vM {
           (this.soundButton = this.experience.ui.soundButton),
           P.delayedCall(1.2, () => {
             this.close(),
-              this.clicked &&
-                localStorage.getItem("soundActive") != "false" &&
+              localStorage.getItem("soundActive") != "false" &&
                 this.soundButton.activate(!1);
           });
       }),
@@ -42063,7 +42062,7 @@ class EM {
       },
     ]);
     (this.experience = new ye()),
-      (this.active = !1),
+      (this.active = localStorage.getItem("soundActive") !== "false"),
       this.setMute(),
       this.setMasterVolume(),
       this.setupSounds(),
@@ -42270,3 +42269,13 @@ class ye {
   }
 }
 new ye(document.getElementById("main-canvas"));
+
+if (typeof window !== "undefined") {
+  const _resumeAudioContext = () => {
+    if (typeof Ni !== "undefined" && Ni.Howler && Ni.Howler.ctx && Ni.Howler.ctx.state === "suspended") {
+      Ni.Howler.ctx.resume();
+    }
+  };
+  window.addEventListener("touchstart", _resumeAudioContext, { passive: true, once: true });
+  window.addEventListener("pointerdown", _resumeAudioContext, { passive: true, once: true });
+}
