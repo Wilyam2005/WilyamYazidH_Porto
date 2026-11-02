@@ -33406,10 +33406,10 @@ class dw {
   }
   onOrientationChange() {
     this.sizes.portrait
-      ? (this.sprite.scale.set(2.61, 5.05),
-        this.sprite.position.set(-0.05, 2.7, 0))
-      : (this.sprite.scale.set(2.61, 5.05),
-        this.sprite.position.set(-0.05, 2.15, 0));
+      ? (this.sprite.scale.set(3.85, 3.85),
+        this.sprite.position.set(-0.05, 2.55, 0))
+      : (this.sprite.scale.set(3.85, 3.85),
+        this.sprite.position.set(-0.05, 2.05, 0));
   }
   setSprite() {
     (this.texture = this.resources.items.davidImage),

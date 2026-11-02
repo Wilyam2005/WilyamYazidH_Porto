@@ -284,7 +284,7 @@
             <!--Music Credits-->
             <div id="music-credit-container" class="row">
                 <span style="font-size: 0.85rem; color: #7c8594;">
-                    Wilyam Yazid Hamdi &bull; Portfolio 2025
+                    Wilyam Yazid Hamdi &bull; Portfolio 2026
                 </span>
             </div>
         </div>
@@ -400,7 +400,7 @@
                             <text x="0" y="0" font-size="12" class="about-header-upper-text">Name :</text>
                             <text x="0" y="20" font-size="17" class="about-header-lower-text">Wilyam</text>
                             <text x="95" y="0" font-size="12" class="about-header-upper-text">Age :</text>
-                            <text x="95" y="20" font-size="17" class="about-header-lower-text">21</text>
+                            <text id="about-age-text" x="95" y="20" font-size="17" class="about-header-lower-text">21</text>
                             <text x="170" y="0" font-size="12" class="about-header-upper-text">From :</text>
                             <text x="170" y="20" font-size="17" class="about-header-lower-text">Indonesia</text>
                         </g>
@@ -752,7 +752,7 @@
                 <a target="_blank" href="https://www.facebook.com/share/14rG2WfAYNf/?mibextid=wwXIfr" title="Facebook" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
                 <a href="mailto:wyazid608@gmail.com" title="Email" class="footer-social-icon"><i class="fas fa-envelope"></i></a>
             </div>
-            <span style="font-size: 0.86rem; color: #64748b;">&copy; 2025 Wilyam Yazid Hamdi &bull; All Rights Reserved</span>
+            <span style="font-size: 0.86rem; color: #64748b;">&copy; 2026 Wilyam Yazid Hamdi &bull; All Rights Reserved</span>
 
             <!--Legal Container-->
             <div id="legal-container" class="row">
@@ -877,7 +877,7 @@
               <div class="cv-grid-2">
                 <div><strong>Nama Lengkap:</strong> Wilyam Yazid Hamdi</div>
                 <div><strong>Jenis Kelamin:</strong> Laki-laki (Male)</div>
-                <div><strong>Tempat, Tgl Lahir:</strong> Penakak, 20 Mei 2005 (Usia 20 Tahun)</div>
+                <div><strong>Tempat, Tgl Lahir:</strong> Penakak, 20 Mei 2005 (Usia <span id="cv-age-text">21</span> Tahun)</div>
                 <div><strong>Status:</strong> Belum Menikah (Single)</div>
                 <div><strong>Daerah Asal:</strong> Penakak, Masbagik Timur, Lombok Timur, NTB</div>
                 <div><strong>Alamat Sekarang:</strong> Trini, Sindudadi, Sleman, D.I. Yogyakarta</div>
@@ -1157,6 +1157,31 @@
         }
       })();
     </script>
+
+    <!-- Auto-update Wilyam Age every year on May 20th -->
+    <script>
+      (function() {
+        function updateAge() {
+          const birthDate = new Date(2005, 4, 20); // 20 Mei 2005
+          const now = new Date();
+          let age = now.getFullYear() - birthDate.getFullYear();
+          const m = now.getMonth() - birthDate.getMonth();
+          if (m < 0 || (m === 0 && now.getDate() < birthDate.getDate())) {
+            age--;
+          }
+          const el1 = document.getElementById('about-age-text');
+          const el2 = document.getElementById('cv-age-text');
+          if (el1) el1.textContent = age;
+          if (el2) el2.textContent = age;
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', updateAge);
+        } else {
+          updateAge();
+        }
+      })();
+    </script>
+
 </body>
 
 </html>
