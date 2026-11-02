@@ -1,0 +1,16 @@
+# Backup/original files (tidak perlu di-push)
+*.orig
+*.bak
+.dummy
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Node (jika ada)
+node_modules/

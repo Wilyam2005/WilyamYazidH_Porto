@@ -1,0 +1,19 @@
+{
+  "name": "Wilyam Yazid Hamdi Portfolio",
+  "short_name": "Wilyam Portfolio",
+  "icons": [
+    {
+      "src": "./head/favion-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./head/favion-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FF923E",
+  "background_color": "#091434",
+  "display": "standalone"
+}
