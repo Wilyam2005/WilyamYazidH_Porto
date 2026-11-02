@@ -255,7 +255,7 @@
     }
     #landing-page {
         align-items: flex-start;
-        padding-top: 72px;
+        padding-top: 66px;
         background-image: linear-gradient(180deg, #F5EFE6 55%, transparent 60%)
     }
     #landing-page-section {
@@ -2711,5 +2711,86 @@ html, body {
     #contact-submit-button {
         width: auto !important;
         margin-left: auto !important;
+    }
+}
+
+
+/* ===================================================
+   HERO SECTION PROPORTIONAL SIZING & BADGES
+   =================================================== */
+.landing-highlight-badges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.landing-badge-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 13px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 146, 62, 0.35);
+    border-radius: 20px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #1e293b;
+    box-shadow: 0 2px 8px rgba(9, 20, 52, 0.05);
+    white-space: nowrap;
+}
+
+@media (max-aspect-ratio: 12/10) {
+    .landing-headline {
+        font-size: 58px !important;
+        font-weight: 700 !important;
+    }
+    .landing-subheading {
+        font-size: 20px !important;
+        font-weight: 500 !important;
+        fill: #475569 !important;
+    }
+    #landing-cta-button,
+    #landing-open-cv-btn {
+        padding: 14px 28px !important;
+        font-size: 1.15rem !important;
+        border-radius: 28px !important;
+        font-weight: 600 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 4px 14px rgba(255, 146, 62, 0.38) !important;
+    }
+    #landing-open-cv-btn {
+        background: rgba(255, 255, 255, 0.96) !important;
+        color: #091434 !important;
+        border: 2px solid #FF923E !important;
+        box-shadow: 0 4px 12px rgba(9, 20, 52, 0.08) !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .landing-headline {
+        font-size: 52px !important;
+    }
+    .landing-subheading {
+        font-size: 18px !important;
+    }
+    #landing-cta-button,
+    #landing-open-cv-btn {
+        padding: 12px 22px !important;
+        font-size: 1.05rem !important;
+    }
+    .landing-badge-chip {
+        font-size: 0.8rem;
+        padding: 6px 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .landing-headline {
+        font-size: 45px !important;
     }
 }
