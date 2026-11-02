@@ -1,4 +1,4 @@
-var ap = Object.defineProperty;
+﻿var ap = Object.defineProperty;
 var lp = (o, e, t) =>
   e in o
     ? ap(o, e, {
@@ -37553,22 +37553,17 @@ class rM {
       (e == "right" ? this.moveForward() : this.moveBack());
   }
   moveBack() {
-    this.currentItemIndex != 4 &&
-      !this.itemsAreMoving &&
-      document
-        .getElementById("work-item-0")
-        .classList.contains("work-item-container-transition") &&
-      (this.currentItemIndex++, this.updatePositions());
+    if (!this.itemsAreMoving && document.getElementById("work-item-0").classList.contains("work-item-container-transition")) {
+      this.currentItemIndex = this.currentItemIndex >= 4 ? 0 : this.currentItemIndex + 1;
+      this.updatePositions();
+    }
   }
   moveForward() {
-    this.currentItemIndex != 0 &&
-      !this.itemsAreMoving &&
-      document
-        .getElementById("work-item-0")
-        .classList.contains("work-item-container-transition") &&
-      (this.currentItemIndex--, this.updatePositions());
-  }
-  onArrowClick() {
+    if (!this.itemsAreMoving && document.getElementById("work-item-0").classList.contains("work-item-container-transition")) {
+      this.currentItemIndex = this.currentItemIndex <= 0 ? 4 : this.currentItemIndex - 1;
+      this.updatePositions();
+    }
+  }  onArrowClick() {
     window.addEventListener("keyup", () => {
       this.scroll.scrollAllowed() &&
         (event.keyCode == 39
@@ -37595,22 +37590,9 @@ class rM {
       this.updateNavigation());
   }
   updateNavigation() {
-    this.currentItemIndex == 0
-      ? (this.domElements.nextButton.classList.add(
-          "work-disabled-navigation-button"
-        ),
-        this.experience.ui.hoverIcon.setupDefault())
-      : this.currentItemIndex == 4
-      ? (this.domElements.backButton.classList.add(
-          "work-disabled-navigation-button"
-        ),
-        this.experience.ui.hoverIcon.setupDefault())
-      : (this.domElements.nextButton.classList.remove(
-          "work-disabled-navigation-button"
-        ),
-        this.domElements.backButton.classList.remove(
-          "work-disabled-navigation-button"
-        ));
+    // Infinite loop: kedua button selalu aktif
+    this.domElements.nextButton.classList.remove("work-disabled-navigation-button");
+    this.domElements.backButton.classList.remove("work-disabled-navigation-button");
   }
 }
 const oM = [

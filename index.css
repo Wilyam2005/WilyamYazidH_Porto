@@ -2547,3 +2547,149 @@ html, body {
         padding: 12px 10px !important;
     }
 }
+
+
+/* ===================================================
+   CONTACT SOCIAL MEDIA GRID - TAMPIL RAPI DI HP
+   =================================================== */
+
+/* Container sosmed: grid 4 kolom */
+#menu-social-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-bottom: 14px !important;
+}
+
+/* Setiap item sosmed: icon + label */
+.contact-social-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    padding: 10px 6px !important;
+    border-radius: 12px !important;
+    background: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+    text-decoration: none !important;
+    color: #091434 !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+}
+
+.contact-social-item i {
+    font-size: 1.3rem !important;
+    line-height: 1 !important;
+    /* Reset filter dari .social-icon lama */
+    filter: none !important;
+    color: #091434 !important;
+}
+
+.contact-social-label {
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    text-align: center !important;
+    line-height: 1 !important;
+    display: block !important;
+}
+
+/* Hover effects per platform */
+.contact-social-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+}
+
+.contact-social-item[title*="WhatsApp"]:hover { background: #25D366 !important; color: #fff !important; border-color: #25D366 !important; }
+.contact-social-item[title*="WhatsApp"]:hover i,
+.contact-social-item[title*="WhatsApp"]:hover .contact-social-label { color: #fff !important; }
+
+.contact-social-item[title*="Instagram"]:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; border-color: transparent !important; }
+.contact-social-item[title*="Instagram"]:hover i,
+.contact-social-item[title*="Instagram"]:hover .contact-social-label { color: #fff !important; }
+
+.contact-social-item[title*="TikTok"]:hover { background: #000 !important; border-color: #000 !important; }
+.contact-social-item[title*="TikTok"]:hover i,
+.contact-social-item[title*="TikTok"]:hover .contact-social-label { color: #fff !important; }
+
+.contact-social-item[title*="LinkedIn"]:hover { background: #0A66C2 !important; border-color: #0A66C2 !important; }
+.contact-social-item[title*="LinkedIn"]:hover i,
+.contact-social-item[title*="LinkedIn"]:hover .contact-social-label { color: #fff !important; }
+
+.contact-social-item[title*="GitHub"]:hover { background: #24292e !important; border-color: #24292e !important; }
+.contact-social-item[title*="GitHub"]:hover i,
+.contact-social-item[title*="GitHub"]:hover .contact-social-label { color: #fff !important; }
+
+.contact-social-item[title*="Facebook"]:hover { background: #1877F2 !important; border-color: #1877F2 !important; }
+.contact-social-item[title*="Facebook"]:hover i,
+.contact-social-item[title*="Facebook"]:hover .contact-social-label { color: #fff !important; }
+
+.contact-social-item[title*="Email"]:hover { background: #FF923E !important; border-color: #FF923E !important; }
+.contact-social-item[title*="Email"]:hover i,
+.contact-social-item[title*="Email"]:hover .contact-social-label { color: #fff !important; }
+
+.contact-social-item[title*="Prestasi"]:hover { background: #f59e0b !important; border-color: #f59e0b !important; }
+.contact-social-item[title*="Prestasi"]:hover i,
+.contact-social-item[title*="Prestasi"]:hover .contact-social-label { color: #fff !important; }
+
+/* Contact button container: sosmed grid di atas, button di bawah */
+#contact-button-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+    margin-top: 16px !important;
+}
+
+/* Tombol Kirim Pesan: lebar penuh */
+#contact-submit-button {
+    width: 100% !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    padding: 14px 20px !important;
+    border-radius: 14px !important;
+    font-size: 1rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Desktop: grid lebih lebar - 8 kolom (semua dalam 1 baris) */
+@media (min-aspect-ratio: 12/10) and (min-width: 600px) {
+    #menu-social-container {
+        grid-template-columns: repeat(8, 1fr) !important;
+    }
+    .contact-social-label {
+        display: none !important; /* Di desktop label disembunyikan, hanya icon */
+    }
+    .contact-social-item {
+        padding: 8px !important;
+        border-radius: 50% !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    .contact-social-item i {
+        font-size: 1.4rem !important;
+        filter: grayscale(1) brightness(8) !important; /* icon putih seperti aslinya */
+        color: white !important;
+    }
+    .contact-social-item:hover i {
+        filter: none !important;
+        color: #091434 !important;
+    }
+    #contact-button-container {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+    #contact-submit-button {
+        width: auto !important;
+        margin-left: auto !important;
+    }
+}

@@ -396,7 +396,7 @@
                             <text x="0" y="0" font-size="12" class="about-header-upper-text">Name :</text>
                             <text x="0" y="20" font-size="17" class="about-header-lower-text">Wilyam</text>
                             <text x="95" y="0" font-size="12" class="about-header-upper-text">Age :</text>
-                            <text x="95" y="20" font-size="17" class="about-header-lower-text">20</text>
+                            <text x="95" y="20" font-size="17" class="about-header-lower-text">21</text>
                             <text x="170" y="0" font-size="12" class="about-header-upper-text">From :</text>
                             <text x="170" y="20" font-size="17" class="about-header-lower-text">Indonesia</text>
                         </g>
@@ -671,39 +671,47 @@
                         </div>
                         <textarea id="contact-message-input-field" tabindex="-1" placeholder="Tuliskan pesan Anda di sini..."></textarea>
                     </div>
-                    <div class="row" id="contact-button-container">
-                        <!--Menu Social Link-->
-                        <div id="menu-social-container" class="row" style="gap: 12px; flex-wrap: wrap;">
-                            <a tabindex="-1" target="_blank" href="https://wa.me/6285934400903" title="WhatsApp: 085934400903">
-                                <i class="fab fa-whatsapp social-icon"></i>
+                    <div id="contact-button-container">
+                        <!--Social Icons Grid - tampil rapi di HP-->
+                        <div id="menu-social-container">
+                            <a tabindex="-1" target="_blank" href="https://wa.me/6285934400903" title="WhatsApp: 085934400903" class="contact-social-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <span class="contact-social-label">WhatsApp</span>
                             </a>
-                            <a tabindex="-1" target="_blank" href="https://www.instagram.com/wilyam_yazid_h?dlrf=MTBuMHA4MW8xeXJkeQ%3D%3D&utm_source=qr" title="Instagram: @wilyam_yazid_h">
-                                <i class="fab fa-instagram social-icon"></i>
+                            <a tabindex="-1" target="_blank" href="https://www.instagram.com/wilyam_yazid_h?dlrf=MTBuMHA4MW8xeXJkeQ%3D%3D&utm_source=qr" title="Instagram: @wilyam_yazid_h" class="contact-social-item">
+                                <i class="fab fa-instagram"></i>
+                                <span class="contact-social-label">Instagram</span>
                             </a>
-                            <a tabindex="-1" target="_blank" href="https://www.tiktok.com/@wilyam_yazid_h?_r=1&_t=ZS-9B3yoIboUde" title="TikTok: @wilyam_yazid_h">
-                                <i class="fab fa-tiktok social-icon"></i>
+                            <a tabindex="-1" target="_blank" href="https://www.tiktok.com/@wilyam_yazid_h?_r=1&_t=ZS-9B3yoIboUde" title="TikTok: @wilyam_yazid_h" class="contact-social-item">
+                                <i class="fab fa-tiktok"></i>
+                                <span class="contact-social-label">TikTok</span>
                             </a>
-                            <a tabindex="-1" target="_blank" href="https://www.linkedin.com/in/wilyam-yazid-hamdi-7210a3281?utm_source=share_via&utm_content=profile&utm_medium=member_ios" title="LinkedIn: Wilyam Yazid Hamdi">
-                                <i class="fab fa-linkedin-in social-icon"></i>
+                            <a tabindex="-1" target="_blank" href="https://www.linkedin.com/in/wilyam-yazid-hamdi-7210a3281?utm_source=share_via&utm_content=profile&utm_medium=member_ios" title="LinkedIn: Wilyam Yazid Hamdi" class="contact-social-item">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span class="contact-social-label">LinkedIn</span>
                             </a>
-                            <a tabindex="-1" target="_blank" href="https://github.com/Wilyam2005/" title="GitHub: Wilyam2005">
-                                <i class="fab fa-github social-icon"></i>
+                            <a tabindex="-1" target="_blank" href="https://github.com/Wilyam2005/" title="GitHub: Wilyam2005" class="contact-social-item">
+                                <i class="fab fa-github"></i>
+                                <span class="contact-social-label">GitHub</span>
                             </a>
-                            <a tabindex="-1" target="_blank" href="https://www.facebook.com/share/14rG2WfAYNf/?mibextid=wwXIfr" title="Facebook: Wilyam Yazid Hamdi">
-                                <i class="fab fa-facebook-f social-icon"></i>
+                            <a tabindex="-1" target="_blank" href="https://www.facebook.com/share/14rG2WfAYNf/?mibextid=wwXIfr" title="Facebook: Wilyam Yazid Hamdi" class="contact-social-item">
+                                <i class="fab fa-facebook-f"></i>
+                                <span class="contact-social-label">Facebook</span>
                             </a>
-                            <a tabindex="-1" href="mailto:wyazid608@gmail.com" title="Email: wyazid608@gmail.com">
-                                <i class="fas fa-envelope social-icon"></i>
+                            <a tabindex="-1" href="mailto:wyazid608@gmail.com" title="Email: wyazid608@gmail.com" class="contact-social-item">
+                                <i class="fas fa-envelope"></i>
+                                <span class="contact-social-label">Email</span>
                             </a>
-                            <a tabindex="-1" href="javascript:void(0)" onclick="window.openAchievementsModal('tab-awards')" title="Lihat Riwayat Prestasi">
-                                <i class="fas fa-trophy social-icon"></i>
+                            <a tabindex="-1" href="javascript:void(0)" onclick="window.openAchievementsModal('tab-awards')" title="Lihat Riwayat Prestasi" class="contact-social-item">
+                                <i class="fas fa-trophy"></i>
+                                <span class="contact-social-label">Prestasi</span>
                             </a>
                         </div>
                         <!--Submit Button-->
-                            <div id="contact-submit-button" class="small-button orange-hover" style="cursor: pointer;">
-                                Kirim Pesan
-                            </div>
+                        <div id="contact-submit-button" class="small-button orange-hover" style="cursor: pointer; width: 100%; text-align: center; display: flex; align-items: center; justify-content: center; padding: 14px 20px; border-radius: 14px; box-sizing: border-box; font-size: 1rem;">
+                            Kirim Pesan
                         </div>
+                    </div>
                     </div>
                 </div>
 
