@@ -37683,7 +37683,7 @@ class lM {
                     </div>
                     <span>${e.description}</span>
                 </div>
-                <div class="work-item-button-container row">
+                <div class="work-item-button-container row center">
                     ${this.renderButtons(e)}
                 </div>
                 ${e.bannerIcons ? this.renderBanner(e) : ""}
@@ -37710,8 +37710,8 @@ class lM {
   }
   renderButtons(e) {
     return `
-        <div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover" style="width: 100%; margin: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
-            <span>Selengkapnya</span> <i class="fas fa-chevron-right" style="font-size: 0.8rem; margin-left: 4px;"></i>
+        <div id="work-item-orange-button-${e.id}" class="work-item-orange-button small-button center orange-hover" style="width: 100%; margin: 0 auto; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: #ffffff;">
+            <span style="color: #ffffff !important; font-weight: 700 !important; font-size: 0.96rem; letter-spacing: 0.4px; text-shadow: 0 1px 2px rgba(0,0,0,0.3); line-height: 1;">Selengkapnya</span> <i class="fas fa-chevron-right" style="font-size: 0.85rem; margin-left: 4px; color: #ffffff !important; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));"></i>
         </div>
     `;
   }

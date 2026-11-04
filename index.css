@@ -558,35 +558,66 @@
 }
 
 .work-item-button-container {
-    margin: 8px 0 2px 0;
+    margin: 8px 0 4px 0;
+    padding: 0 16px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-shrink: 0;
 }
 
 .work-item-orange-button {
     width: 100%;
-    padding: 11px 16px !important;
-    margin: 0 !important;
+    padding: 12px 18px !important;
+    margin: 0 auto !important;
     border-radius: 14px;
-    font-weight: 600;
-    font-size: .92rem;
+    font-weight: 700;
+    font-size: 0.96rem;
+    letter-spacing: 0.4px;
     box-sizing: border-box;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FF923E;
-    color: #fff;
+    gap: 8px;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: #ffffff !important;
     cursor: pointer;
     transition: all .25s ease;
-    box-shadow: 0 4px 14px rgba(255, 146, 62, 0.32);
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+    border: none;
+}
+
+.work-item-orange-button * {
+    color: #ffffff !important;
+}
+
+.work-item-orange-button span {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.96rem !important;
+    letter-spacing: 0.4px !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.work-item-orange-button i {
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    transition: transform 0.25s ease;
 }
 
 .work-item-orange-button:hover {
     transform: translateY(-2px);
-    background: #f07e26;
-    box-shadow: 0 6px 20px rgba(255, 146, 62, 0.45);
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.55);
+}
+
+.work-item-orange-button:hover i {
+    transform: translateX(4px);
 }
 
 .work-item-gray-button {
@@ -745,6 +776,11 @@
     }
     .work-item-button-container {
         margin: 6px 0 0;
+        padding: 0 12px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
     }
     .work-item-orange-button {
         padding: 10px 14px !important;
@@ -1504,21 +1540,66 @@ html, body {
 }
 
 .work-item-button-container {
-    margin: 10px 14px 14px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 8px 0 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .work-item-orange-button {
     width: 100%;
-    padding: 10px 14px !important;
-    font-size: 0.92rem;
-    font-weight: 600;
-    border-radius: 12px;
+    padding: 12px 18px !important;
+    margin: 0 auto !important;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 0.96rem;
+    letter-spacing: 0.4px;
+    box-sizing: border-box;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-sizing: border-box;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: #ffffff !important;
     cursor: pointer;
+    transition: all .25s ease;
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+    border: none;
+}
+
+.work-item-orange-button * {
+    color: #ffffff !important;
+}
+
+.work-item-orange-button span {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.96rem !important;
+    letter-spacing: 0.4px !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.work-item-orange-button i {
+    color: #ffffff !important;
+    font-size: 0.85rem;
+    font-weight: 900;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    transition: transform 0.25s ease;
+}
+
+.work-item-orange-button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.55);
+}
+
+.work-item-orange-button:hover i {
+    transform: translateX(4px);
 }
 
 /* Fix mobile view: Mobile devices & Portrait Aspect Ratios */
@@ -1587,7 +1668,13 @@ html, body {
     }
 
     .work-item-button-container {
-        margin: 8px 12px 12px;
+        padding: 0 12px;
+        margin: 6px 0 8px 0;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .work-item-orange-button {
